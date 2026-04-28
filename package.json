@@ -1,0 +1,13 @@
+{
+  "name": "freshies-cabin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gen:images": "node scripts/generate_images.js",
+    "serve": "npx --yes http-server -p 4173 -c-1 ."
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}
