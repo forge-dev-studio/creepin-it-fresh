@@ -1,6 +1,6 @@
-# PEACHFUZZ Freshies
+# Creepin It Fresh
 
-A vibrant, hand-mold artisan freshie studio website. Built as a Forge Dev.studio showcase / lead-gen template for handmade car-air-freshener brands.
+Pastel-goth, holographic, spooky-cute custom freshies and tumblers studio site. Built by Forge Dev.studio.
 
 - **Live:** see GitHub Pages settings for the URL after first publish.
 - **Stack:** static HTML / CSS / JS. No build step.

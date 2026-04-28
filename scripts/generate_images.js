@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// PEACHFUZZ FRESHIES — vibrant, hand-mold, artisan editorial imagery.
+// CREEPIN IT FRESH — pastel-goth, holographic, spooky-cute imagery.
 // Generated with OpenAI gpt-image-1 (latest image model).
 
 import fs from 'node:fs';
@@ -24,54 +24,54 @@ loadEnv();
 const KEY = process.env.OPENAI_API_KEY;
 if (!KEY) throw new Error('OPENAI_API_KEY missing');
 
-const PALETTE = `colorful palette: hot peach pink, butter yellow, lime green, bubblegum pink, electric sky blue, raw cream, terracotta accents`;
-const VIBE = `vibrant, joyful, hand-crafted, artisan small-batch, slightly rustic, abundant natural light, glossy resin beads, visible mold texture, no text, no logos, no watermarks, photographed by a human in a sunlit garage workshop, real, not 3D rendered`;
+const PALETTE = `pastel-goth color palette: deep eggplant purple, electric violet, cyan-teal, mint green, hot magenta pink, holographic chrome iridescence, off-black, lavender highlights`;
+const VIBE = `pastel-goth, kawaii spooky-cute, hand-poured artisan freshies, glossy resin aroma beads with visible bead texture, slight imperfect handmade feel, bright moody lighting, holographic shimmer, no text, no logos, no watermarks, photographed by a human, real, not 3D rendered`;
 
 const JOBS = [
   {
     out: 'hero/hero-cabin.jpg',
     size: '1536x1024',
-    prompt: `Top-down overhead flat-lay editorial photograph of a sunlit oak workbench scattered with a dozen handmade hand-poured aroma-bead car freshies in fun shapes — a peach, a daisy flower, a red cherry, a mushroom with white dots, a soft heart, a five-point star, a butterfly, a rainbow arch, a crescent moon — each made from glossy resin aroma beads in different bright pours: peach pink, butter yellow, lime green, bubblegum pink, electric sky blue, terracotta. Around them: a few silicone molds, a brass scoop, small amber glass bottles of fragrance oil with simple kraft labels, a roll of cotton string, scattered loose beads, kraft hang tags, a checked cotton tea towel in cream and peach. Bright morning sun rakes across the wood from the upper-left. ${PALETTE}. ${VIBE}.`
+    prompt: `Top-down overhead flat-lay editorial photograph on a glossy purple-and-black checkerboard background, scattered with a dozen handmade hand-poured aroma-bead car freshies in spooky-cute shapes — a chubby ghost, a coffin, a bat with rounded wings, a cute skull, a witch's hat, a pumpkin, a cute cartoon eyeball, a crescent moon, a heart with a lightning bolt, a tombstone — each made from glossy resin aroma beads in different pours: lavender, hot magenta, cyan, mint green, deep purple, off-black with iridescent shimmer. Around them: silicone molds in spooky shapes, a brass scoop, small amber glass bottles of fragrance oil with simple kraft labels, a roll of black satin ribbon, scattered loose holographic-coated beads, kraft hang tags. Cool moody purple-cyan lighting from upper-left, holographic shimmer reflections, tiny silver star sparkles. ${PALETTE}. ${VIBE}.`
   },
   {
     out: 'products/p1-amber-pine.jpg',
     size: '1024x1024',
-    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a chunky daisy flower with five rounded petals and a bright center, made of butter-yellow petals and a peach-pink center, glossy resin beads with visible texture and air bubbles, sitting on a soft cream linen surface with a tiny kraft hang tag tied with cotton string, dappled morning light, joyful artisan studio photography, slightly imperfect handmade feel, ${VIBE}.`
+    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a chubby cartoon ghost with two rounded eye sockets and a wavy bottom, made of pearly white and pale lavender beads with iridescent holographic shimmer, glossy resin texture with visible beads, sitting on a glossy purple-and-black checkerboard tile surface with a black satin ribbon hang loop and a kraft tag, moody cyan side-lighting, tiny silver star sparkles, ${VIBE}.`
   },
   {
     out: 'products/p2-vanilla-leather.jpg',
     size: '1024x1024',
-    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a cute mushroom with a domed cap and short stem, the cap is bubblegum pink with white dots, the stem is cream colored, glossy resin beads with visible bumpy texture, sitting on a powder-blue painted wood surface with a tiny kraft hang tag and cotton string loop, soft sunlight, joyful artisan studio photography, ${VIBE}.`
+    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a cartoon coffin with a cross or heart cutout, made of glossy black and hot magenta marbled beads with visible texture and air bubbles, sitting on a deep eggplant velvet surface, black satin ribbon hang loop, kraft tag, electric violet rim lighting, tiny holographic shimmer, ${VIBE}.`
   },
   {
     out: 'products/p3-georgia-peach.jpg',
     size: '1024x1024',
-    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a plump peach with a small green leaf at the top, peach-pink and warm orange beads marbled together, tiny green beads forming the leaf, glossy resin texture with visible beads and a slight crease down the middle of the peach, sitting on a sun-drenched checked cotton tea towel in cream and peach, kraft hang tag, cotton string, ${VIBE}.`
+    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a cute chubby bat with two rounded wings and small fangs, made of deep purple and cyan-teal beads with iridescent holographic accents, glossy resin texture, sitting on a lavender velvet surface, black satin ribbon, kraft hang tag, soft moody side light, tiny silver star sparkles, ${VIBE}.`
   },
   {
     out: 'products/p4-midnight-tobacco.jpg',
     size: '1024x1024',
-    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a chubby cartoon cherry pair, two round red cherries connected by a green stem with a tiny leaf, made of glossy hot-red resin beads with a slight gradient to deep cherry, sitting on a butter-yellow painted plywood surface, kraft hang tag, cotton string, dappled sunlight, joyful artisan studio photography, ${VIBE}.`
+    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a cute kawaii sugar skull with rounded eye sockets and a small heart on the forehead, made of pearly white beads with mint green and hot magenta accents, holographic chrome shimmer details, glossy resin texture, sitting on a glossy purple-and-black checkerboard tile surface, black satin ribbon, kraft hang tag, ${VIBE}.`
   },
   {
     out: 'products/p5-citrus-cedar.jpg',
     size: '1024x1024',
-    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a chunky butterfly with two rounded wings and a small body, the upper wings are lime green, the lower wings are electric sky blue, the body is butter yellow, glossy resin beads with visible texture, sitting on a soft pink linen surface, kraft hang tag, cotton string loop, dappled sun, joyful artisan studio photography, ${VIBE}.`
+    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a chubby pointy witch's hat with a wide brim and a buckle, made of glossy black beads with mint green and lime accent beads on the brim, iridescent shimmer, sitting on a hot-magenta velvet surface, black satin ribbon, kraft hang tag, soft moody backlight, ${VIBE}.`
   },
   {
     out: 'products/p6-fresh-linen.jpg',
     size: '1024x1024',
-    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a chubby heart with rounded edges, made from marbled bubblegum pink and cream resin beads with visible bead texture and small air bubbles, sitting on a peachy-cream tile surface, kraft hang tag tied with cotton string, soft sunlight, joyful artisan studio photography, ${VIBE}.`
+    prompt: `Studio product photograph of a single handmade hand-poured aroma-bead car freshie shaped like a chubby cartoon pumpkin with a cute jack-o-lantern face (triangle eyes and a smile), made from marbled deep purple and hot magenta resin beads with a tiny mint-green stem, glossy texture with visible beads, sitting on a cyan velvet surface, black satin ribbon, kraft hang tag, soft purple rim light, ${VIBE}.`
   },
   {
     out: 'hero/lifestyle-hands.jpg',
     size: '1536x1024',
-    prompt: `Documentary editorial photograph of a maker's hands wearing a buttery-yellow canvas apron, gently pressing handfuls of glossy peach-pink and butter-yellow aroma beads into a silicone flower-shaped mold on a sunlit oak workbench, scattered colorful beads around the mold, small amber glass bottles of fragrance oil with kraft labels in soft focus, a brass scoop, a checked cream-and-peach cotton tea towel, bright window light, joyful slow-craft artisan documentary photography, ${VIBE}.`
+    prompt: `Documentary editorial photograph of a maker's hands wearing a black canvas apron, with chunky silver rings and black painted nails, gently pressing handfuls of glossy lavender and hot-magenta aroma beads with iridescent holographic shimmer into a silicone bat-shaped mold on a sunlit oak workbench, scattered colorful holographic beads around the mold, small amber glass bottles of fragrance oil with kraft labels in soft focus, a brass scoop, a checked black-and-purple cotton tea towel, dramatic moody window light from the left, ${VIBE}.`
   },
   {
     out: 'hero/lifestyle-car.jpg',
     size: '1024x1536',
-    prompt: `Vertical editorial photograph of a chubby peach-shaped handmade aroma-bead car freshie hanging from the rearview mirror of a powder-blue 1967 Volkswagen Beetle interior, cream vinyl seats, sunny summer afternoon light flooding through the windshield, a small bunch of wildflowers in the door pocket, joyful colorful nostalgic Americana aesthetic, ${VIBE}.`
+    prompt: `Vertical editorial photograph of a chubby ghost-shaped handmade aroma-bead car freshie in pearly white and lavender holographic beads, hanging from the rearview mirror of a clean modern matte-black car interior with subtle purple LED ambient lighting, dusk light through the windshield, slight cyan reflection on the dashboard, moody pastel-goth Y2K aesthetic, ${VIBE}.`
   }
 ];
 
